@@ -1,0 +1,45 @@
+// Colors
+$color-white: hsl(306 0% 100%); // #FFFFFF
+$color-off-white: hsl(36 26% 96%); // #F8F6F3
+$color-red: hsl(14 100% 50%); // #EC483F
+$color-blue: hsl(241 71% 57%); // #4845DF
+$color-green: hsl(151 100% 35%); // #00B25D
+$color-off-lilac: hsl(241 21% 87%); // #D8D7E5
+$color-black: hsl(0 0% 16%); // #262626
+
+
+
+// Font family
+$font-primary:'Jetbrains Mono', 'Courier New', Courier, monospace;
+$font-secondary:'Roboto Condensed', sans-serif;
+
+// Font weights
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+
+// Font implementation
+$font-topbar: $font-primary;
+
+
+// Font size implementations
+$font-size-topbar: 2rem;
+
+
+
+
+// Mediaqueries
+$bp-small: 24rem; // 384px 
+$bp-lowermedium: 37rem; // 592px
+$bp-medium: 48rem; // 768px
+$bp-uppermedium: 60rem; // 960px
+$bp-lowerlarge: 75rem; // 1216px
+$bp-large: 90rem; // 1440px
+$bp-xlarge: 120rem; // 1920px
+
+
+// Padding implementations
+
+// Vertical main padding
+$vertical-padding: clamp(1.6rem, 2.88vw + 0.48rem, 6rem);
