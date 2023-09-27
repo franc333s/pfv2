@@ -1,0 +1,129 @@
+@import "../../scss/sass-variables";
+@import "../../scss/mixins";
+
+
+
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+
+    color: $color-black;
+    font-family: $font-topbar;
+    font-size: $font-size-topbar;
+    text-transform: uppercase;
+    font-weight: $font-weight-light;
+
+    padding-left: $vertical-padding;
+    padding-right: $vertical-padding;
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+  
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    &__home {
+        cursor: pointer;
+        z-index: 3;
+
+        &:hover {
+            background-color: transparent;
+            color: transparent;
+            box-shadow: none;
+        }
+    }
+
+    &__btn {
+        font-family: $font-primary;
+        font-size: $font-size-topbar;
+        text-transform: uppercase;
+        font-weight: $font-weight-light;
+        cursor: pointer;
+        z-index: 3;
+        padding-right: 0;
+
+        &:hover {
+            background-color: transparent;
+            color: transparent;
+            box-shadow: none;
+        }
+
+        @include mq($bp-medium) {
+            display: none;
+        }
+    }
+
+    &__nav {
+        width: 100vw;
+        height: 0;
+        overflow: hidden;
+        transition: all .5s ease;
+        z-index: 3;
+
+        @include mq($bp-medium) {
+            height: auto;
+            width: auto;
+        }
+
+        &.isActive {
+            height: 100vh;
+            opacity: 1;
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+
+            color: $color-white;
+            font-family: $font-topbar;
+            font-size: $font-size-topbar;
+            border-radius: 1rem;
+
+            margin-top: 4rem;
+            padding-bottom: 8rem;
+            z-index: 3;
+            
+
+            @include mq($bp-medium) {
+                display: flex;
+                flex-direction: row;
+
+                gap: 4rem;
+                margin-top: 0;
+                padding-top: 0;
+                padding-bottom: 0;
+
+                background-color: transparent;
+                color: $color-black;
+                font-family: $font-topbar;
+                border-radius: 0;
+            }
+
+            &__item {
+                display: flex;
+                justify-content: center;
+                padding-top: 8rem;
+                font-size: $font-size-topbar;
+                font-weight: $font-weight-light;
+                z-index: 3;
+
+                &:hover {
+                    background-color: transparent;
+                    color: transparent;
+                    box-shadow: none;
+                }
+
+                @include mq($bp-medium) {
+                    flex-direction: row;
+                    padding-top: 0;
+                    font-size: $font-size-topbar;
+                    font-weight: $font-weight-light;
+                }
+            }
+        }
+    }
+}
+
