@@ -1,9 +1,23 @@
+import Topbar from "../components/topbar/Topbar";
+
 
 function Info() {
 
+    
     return (
         <>
-            <h1>Info</h1>
+            <header>
+                <Topbar />
+            </header>
+
+            <h1 className="selected-projects">Info</h1>
+            <h1 className="selected-projects">Info</h1>
+            <h1 className="selected-projects">Info</h1>
+            <h1 className="selected-projects">Info</h1>
+            <h1 className="selected-projects">Info</h1>
+            <h1 className="selected-projects">Info</h1>
+            <h1 className="selected-projects">Info</h1>
+
         </>
     )
 }

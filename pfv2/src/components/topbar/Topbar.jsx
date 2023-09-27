@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Topbar.scss";
 
 
-function Topbar() {
+function Topbar({ backgroundColor, textColor, scrollStage }) {
 
     const [ menu , setMenu ] = useState( false );
     const toggleMenu = () => {
@@ -12,10 +12,25 @@ function Topbar() {
     const closeMenu = () => {
         setMenu( false )
     }
+
+    const getTopbarClasses = () => {
+    switch (scrollStage) {
+        case 1:
+            return 'topbar stage1';
+        case 2:
+            return 'topbar stage2';
+        case 3:
+            return 'topbar stage3';
+        case 4:
+            return 'topbar stage4';
+        default:
+            return 'topbar';
+    }
+  };
     
     return (
     <>
-        <div className="topbar">
+        <div className={getTopbarClasses()}>
             
             <Link onClick={ closeMenu } to="/" className="topbar__home">Marina Francés</Link>
             

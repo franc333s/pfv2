@@ -3,13 +3,13 @@
 
 
 svg {
-    height: 1.5rem;
+    height: clamp(1.4rem, 0.26vw + 1.3rem, 1.8rem);
 }
 
 .btn {
 
     &--primary {
-        font-size: 2rem;
+        font-size: clamp(2rem, 0.26vw + 1.9rem, 2.4rem);
         text-transform: uppercase;
         padding-left: 0.4rem;
     }

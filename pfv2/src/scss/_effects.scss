@@ -1,0 +1,30 @@
+@import "./sass-variables";
+@import "./mixins";
+
+/* Etapa 1 */
+.stage1 {
+    background-color: $color-bg-white;
+    color: $color-black;
+    transition: background-color .5s;
+}
+
+/* Etapa 2 */
+.stage2 {
+    background-color: $color-bg-blue;
+    color: $color-white;
+    transition: background-color .5s;
+}
+
+/* Etapa 3 */
+.stage3 {
+    background-color: $color-bg-green;
+    color: $color-white;
+    transition: background-color .5s;
+}
+
+/* Etapa 4 */
+.stage4 {
+    background-color: $color-bg-black;
+    color: $color-white;
+    transition: background-color .5s;
+}
