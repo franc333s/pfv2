@@ -13,6 +13,13 @@
     background-color: $color-bg-blue;
     color: $color-white;
     transition: background-color .5s;
+
+    & svg,
+    & .btn--primary {
+        color: $color-yellow;
+        fill: $color-bg-yellow;
+
+    }
 }
 
 /* Etapa 3 */
@@ -20,6 +27,12 @@
     background-color: $color-bg-green;
     color: $color-white;
     transition: background-color .5s;
+
+    & svg,
+    & .btn--primary {
+        color: $color-yellow;
+        fill: $color-bg-yellow;
+    }
 }
 
 /* Etapa 4 */

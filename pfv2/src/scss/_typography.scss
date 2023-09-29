@@ -11,7 +11,6 @@ h2,
 .h2 {
     font-size: clamp(6rem, 2.61vw + 4.98rem, 10rem);
     font-weight: $font-weight-light;
-    line-height: 86%;
 }
 
 h3,
@@ -20,3 +19,21 @@ h3,
     font-weight: $font-weight-light;
     text-transform: uppercase;
 }
+
+
+h4,
+.h4 {
+    font-size: clamp(6rem, 1.63vw + 5.36rem, 8.5rem);
+    font-weight: $font-weight-light;
+    text-transform: uppercase;
+}
+
+h5,
+.h5 {
+    color: $color-bg-green;
+    font-size: clamp(1.6rem, 0.26vw + 1.5rem, 2rem);
+    font-weight: $font-weight-light;
+    font-style: italic;
+
+}
+

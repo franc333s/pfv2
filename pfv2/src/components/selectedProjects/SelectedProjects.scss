@@ -4,7 +4,7 @@
 
 .selected-proj {
     padding-top: 40rem;
-    padding-bottom: 40rem;
+    padding-bottom: 60rem;
 
     & > .h3 {
         padding-bottom: 4rem;
@@ -23,7 +23,7 @@
         
 
         &__title {
-            margin-bottom: 2rem;
+            margin-bottom: 1.2rem;
 
             @include mq($bp-uppermedium) {
                 margin-bottom: 0;

@@ -11,6 +11,9 @@ svg {
     &--primary {
         font-size: clamp(2rem, 0.26vw + 1.9rem, 2.4rem);
         text-transform: uppercase;
-        padding-left: 0.4rem;
+
+        & svg {
+            padding-right: .6rem;
+        }
     }
 }

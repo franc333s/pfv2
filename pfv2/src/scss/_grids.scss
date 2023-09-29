@@ -1,0 +1,25 @@
+@import "./sass-variables";
+@import "./mixins";
+
+.home-hero {
+
+    &__links {
+        display: flex;
+        gap: 3.2rem;
+    }
+}
+
+.home-contact {
+
+    @include mq($bp-uppermedium) {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr;
+    }
+}
+
+.home-copyright {
+    display: flex;
+    justify-content: flex-end;
+    align-items: self-end;
+
+}

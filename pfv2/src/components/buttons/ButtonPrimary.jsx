@@ -10,8 +10,10 @@ const ButtonPrimary = ({ to, text, openInNewTab, className }) => {
 
     return (
         <>
-            <ArrowRight/>
-            <Link className={`btn--primary ${className || ""}`} to={to} {...linkProps}>{text}</Link>
+            <div className={`btn--primary ${className || ""}`}>
+                <ArrowRight/>
+                <Link to={to} {...linkProps}>{text}</Link>
+            </div>
         </>
 
     );

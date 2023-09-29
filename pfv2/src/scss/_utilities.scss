@@ -1,0 +1,12 @@
+@import "./sass-variables";
+@import "./mixins";
+
+.line-height-86 {
+    line-height: 86%;
+}
+
+.copyright-text {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    padding: 8rem 0 2rem;
+}

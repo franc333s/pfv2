@@ -17,11 +17,23 @@ body {
     padding-top: 7.2rem;
 
     &__links {
-        padding-top: clamp(3.2rem, 1.96vw + 2.44rem, 6.2rem);
-
-        &__item {
-            padding-right: 3.2rem;
-        }
-
+        padding-top: clamp(2.8rem, 1.83vw + 2.09rem, 5.6rem);
     }
 }
+
+.home-about {
+
+    &__title {
+        padding-bottom: 2.8rem;
+    }
+
+    &__btn {
+        padding-top: clamp(2.8rem, 1.83vw + 2.09rem, 5.6rem);
+    }
+}
+
+.home-contact {
+    padding-top: 40rem;
+}
+
+
