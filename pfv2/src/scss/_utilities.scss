@@ -1,7 +1,7 @@
 @import "./sass-variables";
 @import "./mixins";
 
-.line-height-86 {
+.vertical-trim-line-height {
     line-height: 86%;
 }
 
@@ -9,4 +9,16 @@
     text-transform: uppercase;
     font-size: 1.6rem;
     padding: 8rem 0 2rem;
+}
+
+
+// Loop for text color and background colors
+@each $color, $i in $map-colors {
+    .text-color-#{$color} {
+        color: $i;
+    }
+
+    .bg-color-#{$color} {
+        background-color: $i;
+    } 
 }

@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import "./scss/global.scss";
 
 import Home from "./views/Home";
-import Projects from "./views/Projects";
+import ProjectsPage from "./views/ProjectsPage";
 import OneProject from "./views/OneProject";
 import Info from "./views/Info";
 
@@ -15,8 +15,8 @@ function App() {
             
             <Routes>
                 <Route path='/' element={<Home />} />
-                <Route path='/projects' element={<Projects />} />
-                <Route path='/' element={<OneProject />} />
+                <Route path='/projects' element={<ProjectsPage />} />
+                <Route path='/projects/:slug' element={<OneProject />} />
                 <Route path='/info' element={<Info />} />
             </Routes>
         </>

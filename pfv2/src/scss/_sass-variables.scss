@@ -47,3 +47,20 @@ $bp-xlarge: 120rem; // 1920px
 
 // Vertical main padding
 $vertical-padding: clamp(1.6rem, 2.88vw + 0.48rem, 6rem);
+
+
+
+
+
+
+
+// Variables for @each / @for / etc
+
+// Maps
+$map-colors: (
+    "white": $color-white,
+    "yellow": $color-yellow,
+    "blue": $color-blue,
+    "green": $color-green,
+    "black": $color-black
+);

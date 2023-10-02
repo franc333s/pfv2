@@ -37,7 +37,7 @@ function Home() {
                 <Topbar scrollStage={scrollStage}/>
             </header>
 
-            <main className={`vertical-padding stage${scrollStage}`}>
+            <main className={`vertical-padding topbar-offset-padding stage${scrollStage}`}>
 
                 <section className="home-hero">
                     <h1 className="home-hero__title">Frontend developer with a background in digital design</h1>

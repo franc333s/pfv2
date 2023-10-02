@@ -1,0 +1,19 @@
+@import "../../scss/sass-variables";
+@import "../../scss/mixins";
+
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 4rem;
+
+    color: $color-white;
+    background-color: $color-bg-blue;
+    text-transform: uppercase;
+    font-size: 2rem;
+
+    &__item:last-child {
+        justify-self: end;
+    } 
+
+}

@@ -4,13 +4,14 @@
 }
 // Check if it's worth to eliminate all paddings
 
-body {
-    padding-top: 7rem;
-}
 
 .vertical-padding {
     padding-left: $vertical-padding;
     padding-right: $vertical-padding;
+}
+
+.topbar-offset-padding {
+    padding-top: 7rem;
 }
 
 .home-hero {

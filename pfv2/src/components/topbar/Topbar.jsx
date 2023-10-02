@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Topbar.scss";
 
 
-function Topbar({ backgroundColor, textColor, scrollStage }) {
+function Topbar({ scrollStage, className }) {
 
     const [ menu , setMenu ] = useState( false );
     const toggleMenu = () => {
@@ -24,10 +24,10 @@ function Topbar({ backgroundColor, textColor, scrollStage }) {
         case 4:
             return 'topbar stage4';
         default:
-            return 'topbar';
+            return `topbar ${className || ""}`;
     }
   };
-    
+
     return (
     <>
         <div className={getTopbarClasses()}>

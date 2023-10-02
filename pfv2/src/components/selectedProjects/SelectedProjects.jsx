@@ -10,7 +10,7 @@ function SelectedProjects () {
                 <p className="h3 ">Selected projects</p>
 
                 <div className="selected-proj__project">
-                    <h2 className="selected-proj__project__title line-height-86">Cuatro&nbsp;Cuatros</h2>
+                    <h2 className="selected-proj__project__title vertical-trim-line-height">Cuatro&nbsp;Cuatros</h2>
                     <div className="selected-proj__project__specs">
                         <p className="h3">Frontend</p>
                         <p className="h3">2023</p>
@@ -18,21 +18,21 @@ function SelectedProjects () {
                 </div>
                
                 <div className="selected-proj__project">
-                    <h2 className="selected-proj__project__title line-height-86">Crude</h2>
+                    <h2 className="selected-proj__project__title vertical-trim-line-height">Crude</h2>
                     <div className="selected-proj__project__specs">
                         <p className="h3">Ux/ui&nbsp;+&nbsp;Frontend</p>
                         <p className="h3">2023</p>
                     </div>
                 </div>
                 <div className="selected-proj__project">
-                    <h2 className="selected-proj__project__title line-height-86">Pokédex</h2>
+                    <h2 className="selected-proj__project__title vertical-trim-line-height">Pokédex</h2>
                     <div className="selected-proj__project__specs">
                         <p className="h3">Ux/ui&nbsp;+&nbsp;Frontend</p>
                         <p className="h3">2023</p>
                     </div>
                 </div>
                 <div className="selected-proj__project">
-                    <h2 className="selected-proj__project__title line-height-86">About</h2>
+                    <h2 className="selected-proj__project__title vertical-trim-line-height">About</h2>
                     <div className="selected-proj__project__specs">
                         <p className="h3">Ux/ui&nbsp;+&nbsp;Frontend</p>
                         <p className="h3">2022</p>

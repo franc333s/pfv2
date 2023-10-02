@@ -1,0 +1,94 @@
+[
+    {
+        "id": 1,
+        "projectName": "Cuatro Cuatros",
+        "slug": "cuatro-cuatros",
+        "role": "Frontend Dev",
+        "year": "2023",
+        "month": "June",
+        "projectSummary": "Cuatro Cuatros is a Product Design Studio from Valencia (SP). This website was designed by Cuatro Cuatros and developed by me in Wordpress.",
+        "projectURL": "https://cuatrocuatros.com",
+        "projectDescription": "lala",
+        "projectImg": "/mfs.png",
+        "linkGithub": "https://github.com/franc333s/cuatrocuatros-landing"
+    },
+    {
+        "id": 2,
+        "projectName": "Crude",
+        "slug": "crude",
+        "role": "Ux/Ui, Frontend Dev",
+        "month": "June",
+        "year": "2023",
+        "projectSummary": "Crude, an all-gender jewelry brand, is an e-commerce designed in Figma and developed in Wordpress/Woocommerce.",
+        "projectURL": "https://crudecrude.com",
+        "projectDescription": "Crude is an e-commerce project for an all-gender jewelry brand. This project involved the user experience and user interface (UX/UI) design followed by the development of an online sales platform with WooCommerce and WordPress.",
+        "projectImg": "/mfs.png",
+        "linkGithub": "https://github.com/franc333s/crude-shop"
+    },
+    {
+        "id": 3,
+        "projectName": "Pokédex",
+        "slug": "pokedex",
+        "role": "Ux/Ui, Frontend Dev",
+        "month": "June",
+        "year": "2023",
+        "projectSummary": "Lala",
+        "projectURL": "https://pokedex-mfs.netlify.app/",
+        "projectDescription": "lala.",
+        "projectImg": "/mfs.png",
+        "linkGithub": "https://github.com/franc333s/pokedex"
+    },
+    {
+        "id": 4,
+        "projectName": "QuoteApp",
+        "slug": "quoteapp",
+        "role": "Ux/Ui, Frontend Dev",
+        "month": "June",
+        "year": "2023",
+        "projectSummary": "Lala",
+        "projectURL": "https://quoteapp-mfrances.netlify.app/",
+        "projectDescription": "lala.",
+        "projectImg": "/mfs.png",
+        "linkGithub": "https://github.com/franc333s/quote-app"
+    },
+    {
+        "id": 5,
+        "projectName": "About me",
+        "slug": "about-me",
+        "role": "Ux/Ui, Frontend Dev",
+        "month": "June",
+        "year": "2023",
+        "projectSummary": "lala",
+        "projectURL": "https://astonishing-torte.netlify.app/",
+        "projectDescription": "lala.",
+        "projectImg": "/mfs.png",
+        "linkGithub": "https://github.com/franc333s/project-alpha-about-me"
+    }
+    ,
+    {
+        "id": 6,
+        "projectName": "Portfolio",
+        "slug": "portfolio",
+        "role": "Ux/Ui, Frontend Dev",
+        "month": "June",
+        "year": "2023",
+        "projectSummary": "The design and development of this portfolio in React was my final project for my postgraduate course in Front-End Web Design and Development.",
+        "projectURL": "https://marina-frances.netlify.app/",
+        "projectDescription": "lala.",
+        "projectImg": "/mfs.png",
+        "linkGithub": "https://github.com/franc333s/pfv2"
+    },
+    {
+        "id": 7,
+        "projectName": "Alutec",
+        "slug": "alutec",
+        "role": "Ui Design",
+        "month": "June",
+        "year": "2019",
+        "projectSummary": "Alutec was one of the first UI designs I carried out in my last job. For this website, we were looking for an image-based language that showcased the company's furniture catalog to potential buyers.",
+        "projectURL": "https://alutec.com",
+        "projectDescription": "lala.",
+        "projectImg": "/mfs.png",
+        "linkGithub": ""
+    }
+]

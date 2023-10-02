@@ -1,0 +1,36 @@
+@import "../../scss/sass-variables";
+@import "../../scss/mixins";
+
+
+.project-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 100rem;
+    padding-bottom: clamp(5.2rem, 3.14vw + 3.98rem, 10rem);
+
+    color: $color-white;
+    text-align: center;
+
+    &__tech {
+        font-size: clamp(1.6rem, 0.26vw + 1.5rem, 2rem);;
+    }
+    
+
+    &__desc {
+        font-size: clamp(1.6rem, 0.26vw + 1.5rem, 2rem);
+        
+    }
+
+    &__btn {
+        color: $color-yellow;
+        font-size: clamp(2rem, 0.26vw + 1.9rem, 2.4rem);
+        padding-top: clamp(2.8rem, 0.78vw + 2.49rem, 4rem);;
+
+        & > svg {
+            fill: $color-bg-yellow;
+        }
+    }
+}
