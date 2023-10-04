@@ -1,0 +1,48 @@
+@import "../../../scss/sass-variables";
+@import "../../../scss/mixins";
+
+
+
+.project-desc {
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
+        @include mq($bp-uppermedium) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: end;
+        }
+
+    }
+
+    &__bottom {
+        padding-top: clamp(2.4rem, 3.14vw + 1.18rem, 7.2rem);
+        padding-bottom: clamp(2.4rem, 3.14vw + 1.18rem, 7.2rem);
+
+        @include mq($bp-medium) {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            justify-content: space-between;
+        }
+
+        &__p {
+            font-size: clamp(2.8rem, 1.7vw + 2.14rem, 5.4rem);
+        }
+
+        &__img {
+            padding-top: 4.2rem;
+            width: clamp(22.4rem, 6.54vw + 19.85rem, 32.4rem);
+            justify-self: flex-end;
+            border-radius: 2px;
+            //box-shadow: 0 0 4px $color-bg-black;
+
+            @include mq($bp-medium) {
+                padding-top: 0;
+
+            }
+        }
+    }
+}

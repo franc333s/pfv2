@@ -1,0 +1,50 @@
+@import "../../../scss/sass-variables";
+@import "../../../scss/mixins";
+
+.project-specs {
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 1.2rem;
+
+    @include mq($bp-medium) {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+    }
+
+    &__group {
+
+        @include mq($bp-medium) {
+            display: flex;
+            gap: 4rem;
+    
+        }
+
+
+
+    }
+
+    
+    &__h3 {
+        font-size: clamp(2rem, 0.26vw + 1.9rem, 2.4rem);
+        font-family: $font-secondary;
+        font-weight: $font-weight-bold;
+    }
+
+    &__p {
+        font-size: clamp(1.6rem, 0.52vw + 1.4rem, 2.4rem);
+    }
+
+
+    &-github {
+        padding-top: clamp(2rem, 3.92vw + 0.47rem, 8rem);
+        padding-bottom: 4rem;
+
+        &__link {
+            text-decoration: underline;
+        }
+    }
+
+}

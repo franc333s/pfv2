@@ -19,7 +19,7 @@ function OneProject() {
     return (
         <>
             <header>
-                <Topbar className="bg-color-blue text-color-white"/>
+                <Topbar className=""/>
             </header>
 
             <main className="topbar-offset-padding vertical-padding">
@@ -39,8 +39,8 @@ function OneProject() {
                     linkGithub={project.linkGithub}
                 />
 
-                <div>
-                    <ButtonPrimary to="/projects" text="Return to all projects" />
+                <div className="display-flex justify-content--end">
+                    <ButtonPrimary className="text-color-green svg-color-green" to="/projects" text="Return to all projects" />
                 </div>
             </main>
         

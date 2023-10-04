@@ -1,6 +1,15 @@
 @import "./sass-variables";
 @import "./mixins";
 
+
+.display-flex {
+    display: flex;
+}
+.justify-content--end {
+    justify-content: end;
+}
+
+
 .vertical-trim-line-height {
     line-height: 86%;
 }
@@ -12,7 +21,7 @@
 }
 
 
-// Loop for text color and background colors
+// Loop for text color, background color and svg color
 @each $color, $i in $map-colors {
     .text-color-#{$color} {
         color: $i;
@@ -20,5 +29,9 @@
 
     .bg-color-#{$color} {
         background-color: $i;
-    } 
+    }
+
+    .svg-color-#{$color} {
+        fill: $i;
+    }
 }
