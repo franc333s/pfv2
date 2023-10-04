@@ -44,7 +44,7 @@ function OneProject() {
                 </div>
             </main>
         
-            <Footer />
+            <Footer className="footer-padding-top"/>
 
 
            

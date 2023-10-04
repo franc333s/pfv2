@@ -5,15 +5,28 @@
 .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding-top: 4rem;
 
     color: $color-white;
     background-color: $color-bg-blue;
     text-transform: uppercase;
     font-size: 2rem;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
 
     &__item:last-child {
         justify-self: end;
-    } 
+    }
+
+    @include mq($bp-lowermedium) {
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+
+    @include mq($bp-uppermedium) {
+        grid-template-columns: 1fr 1fr 4fr;
+    }
+    
+    @include mq($bp-large) {
+        grid-template-columns: 1fr 1fr 6fr;
+    }
 
 }

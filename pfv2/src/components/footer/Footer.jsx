@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 
 import "./Footer.scss"
 
-function Footer() {
+function Footer({ className }) {
 
     return (
         <>
-            <footer>
+            <footer className={`${className || ""}`}>
                 <ul className="footer vertical-padding">
                     <li className="footer__item"><Link to={"mailto:marinafase@gmail.com"}>Contact</Link></li>
                     <li className="footer__item"><Link to="/info">Info</Link></li>
