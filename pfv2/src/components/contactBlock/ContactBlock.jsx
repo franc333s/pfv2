@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import "./ContactBlock.scss"
 
 
-function ContactBlock () {
+function ContactBlock ({ className }) {
     
     return (
         <>
-        <div>
+        <div className={`${className || ""}`}>
             <div className="contact-block">
                 <p className="contact-block__p">write to me at:</p>
 

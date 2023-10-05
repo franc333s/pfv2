@@ -7,7 +7,7 @@
     grid-template-columns: 1fr 1fr 1fr;
 
     color: $color-white;
-    background-color: $color-bg-blue;
+    background-color: $color-bg-black;
     text-transform: uppercase;
     font-size: 2rem;
     padding-top: .8rem;
@@ -18,15 +18,15 @@
     }
 
     @include mq($bp-lowermedium) {
-        grid-template-columns: 1fr 1fr 2fr;
+        grid-template-columns: 1fr 1fr 3fr;
     }
 
     @include mq($bp-uppermedium) {
-        grid-template-columns: 1fr 1fr 4fr;
+        grid-template-columns: 1fr 1fr 6fr;
     }
     
     @include mq($bp-large) {
-        grid-template-columns: 1fr 1fr 6fr;
+        grid-template-columns: 1fr 1fr 8fr;
     }
 
 }

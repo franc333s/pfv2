@@ -19,7 +19,7 @@ function OneProject() {
     return (
         <>
             <header>
-                <Topbar className=""/>
+                <Topbar className="bg-color-white text-color-black"/>
             </header>
 
             <main className="topbar-offset-padding vertical-padding">

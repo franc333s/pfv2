@@ -37,3 +37,15 @@ h5,
 
 }
 
+
+
+
+.p--medium {
+    font-size: clamp(2rem, 0.65vw + 1.75rem, 3rem);
+
+}
+
+.p--xlarge {
+    font-size: clamp(3.2rem, 1.44vw + 2.64rem, 5.4rem);
+}
+
