@@ -38,14 +38,19 @@ h5,
 }
 
 
-
+.p--small {
+    font-size: clamp(1.6rem, 0.52vw + 1.4rem, 2.4rem);
+    font-weight: $font-weight-xlight;
+}
 
 .p--medium {
     font-size: clamp(2rem, 0.65vw + 1.75rem, 3rem);
+    font-weight: $font-weight-xlight;
 
 }
 
 .p--xlarge {
     font-size: clamp(3.2rem, 1.44vw + 2.64rem, 5.4rem);
+    font-weight: $font-weight-xlight;
 }
 

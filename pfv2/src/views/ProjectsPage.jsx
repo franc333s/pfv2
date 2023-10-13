@@ -1,7 +1,5 @@
-
-
 import Footer from "../components/footer/Footer";
-import ProjectBlock from "../components/projectBlock/ProjectBlock";
+import ProjectBlock from "../components/projectsPageBlock/ProjectBlock";
 import Topbar from "../components/topbar/Topbar";
 
 

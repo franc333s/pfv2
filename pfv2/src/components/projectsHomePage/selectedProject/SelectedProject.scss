@@ -1,0 +1,93 @@
+@import "../../../scss/sass-variables";
+@import "../../../scss/mixins";
+
+.sel-proj {
+
+    &__btn {
+        text-align: left;
+        cursor: pointer;
+
+        @include mq($bp-uppermedium) {
+            display: flex;
+            align-items: flex-end;
+            gap: 4rem;
+        }
+
+        &__title {
+            margin-bottom: .8rem;
+
+            @include mq($bp-uppermedium) {
+                margin-bottom: 0;
+            }
+        }
+
+        &__specs {
+            display: flex;
+            gap: 4rem;
+        }
+    }
+
+
+    &__content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .6s ease-out;
+
+        &__img {
+            width: 100%;
+            border-radius: clamp(0.2rem, 0.39vw + 0.05rem, 0.8rem);
+            margin: clamp(1.4rem, 1.7vw + 0.74rem, 4rem) 0;
+        }
+
+        &__btn {
+            padding-top: 4rem;
+            font-size: clamp(1.6rem, 0.52vw + 1.4rem, 2.4rem);
+        }
+    }
+
+    &.active .sel-proj__content {
+        max-height: 120rem;
+    }
+
+    & + .sel-proj {
+        padding-top: clamp(4rem, 1.31vw + 3.49rem, 6rem);;
+    }
+}
+
+
+// Crossed text hover effect
+.sel-proj.active .sel-proj__btn__title, 
+.sel-proj__btn__title:hover {
+
+    &::after {
+
+        @include mq($bp-lowermedium) {
+            width: 100%;
+        }
+    }
+}
+
+.line-through-effect {
+
+    @include mq($bp-lowermedium) {
+        position: relative;
+    }
+
+    &.line-through-effect__line::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2rem;
+        left: 0;
+        top: calc(50% - .01rem / 2);
+        background-color: $color-bg-green;
+        transition: 280ms ease-in-out;
+        pointer-events: none;
+        transform: skewY(-2deg);
+        transform-origin: left;
+    }
+
+    &.line-through-effect__line:hover::after {
+      width: 100%;
+    }
+}

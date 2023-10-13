@@ -8,11 +8,11 @@ import OneProject from "./views/OneProject";
 import Info from "./views/Info";
 
 
+
 function App() {
   
   return (
         <>
-            
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/projects' element={<ProjectsPage />} />

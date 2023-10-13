@@ -78,9 +78,10 @@
             font-size: $font-size-topbar;
             border-radius: 1rem;
 
-            margin-top: 4rem;
+            margin-top: 20rem;
             padding-bottom: 8rem;
             z-index: 3;
+            height: 100%;
 
 
             @include mq($bp-medium) {
@@ -94,13 +95,15 @@
 
                 font-family: $font-topbar;
                 border-radius: 0;
+                height: auto;
             }
 
             &__item {
                 display: flex;
                 justify-content: center;
-                padding-top: 8rem;
-                font-size: $font-size-topbar;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                font-size: $font-size-topbar--large;
                 font-weight: $font-weight-light;
                 z-index: 3;
 
@@ -112,6 +115,7 @@
                 @include mq($bp-medium) {
                     flex-direction: row;
                     padding-top: 0;
+                    padding-bottom: 0;
                     font-size: $font-size-topbar;
                     font-weight: $font-weight-light;
                 }

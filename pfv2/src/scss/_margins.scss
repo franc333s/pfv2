@@ -22,10 +22,24 @@
     }
 }
 
+.home-selec-proj {
+    padding-top: 24rem;
+
+    @include mq($bp-medium) {
+        padding-top: 40rem;
+    }
+
+}
+
 .home-about {
+    padding-top: 24rem;
+
+    @include mq($bp-medium) {
+        padding-top: 40rem;
+    }
 
     &__title {
-        padding-bottom: 2.8rem;
+        padding-bottom:  clamp(2.4rem, 1.05vw + 1.99rem, 4rem);
     }
 
     &__btn {
@@ -34,7 +48,11 @@
 }
 
 .home-contact {
-    padding-top: 40rem;
+    padding-top: 24rem;
+
+    @include mq($bp-medium) {
+        padding-top: 40rem;
+    }
 }
 
 

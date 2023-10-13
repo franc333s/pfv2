@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import ButtonPrimary from "../components/buttons/ButtonPrimary";
-import ContactBlock from "../components/contactBlock/ContactBlock";
-import SelectedProjects from "../components/selectedProjects/SelectedProjects";
+import ContactInfo from "../components/contactInfo/contactInfo";
+import SelecProjFeed from "../components/projectsHomePage/SelecProjFeed";
 import Topbar from "../components/topbar/Topbar";
 
 
@@ -9,27 +10,26 @@ function Home() {
 
     const [ scrollStage, setScrollStage ] = useState(1);
 
+    const [refHero, inViewHero] = useInView()
+    const [refProjFeed, inViewProjFeed] = useInView({ threshold: 0.2, })
+    const [refAbout, inViewAbout] = useInView({ threshold: 0.2, })
+    const [refContact, inViewContact] = useInView({ threshold: 0.2, })
+
+    const updateScrollStage = () => {
+        if (inViewHero) {
+            setScrollStage(1);
+        } else if (inViewProjFeed) {
+            setScrollStage(2);
+        } else if (inViewAbout) {
+            setScrollStage(3);
+        } else {
+            setScrollStage(4);
+        }
+    }
+
     useEffect(() => {
-        const handleScroll = () => {
-            const scrollY = window.pageYOffset;
-
-            if (scrollY < 450) {
-                setScrollStage(1);
-            } else if (scrollY < 1400) {
-                setScrollStage(2);
-            } else if (scrollY < 2200) {
-                setScrollStage(3);
-            } else {
-                setScrollStage(4);
-            }
-        };
-    
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
+        updateScrollStage();
+    }, [inViewHero, inViewProjFeed, inViewAbout, inViewContact]);
 
     return (
         <>
@@ -39,7 +39,7 @@ function Home() {
 
             <main className={`vertical-padding topbar-offset-padding stage${scrollStage}`}>
 
-                <section className="home-hero">
+                <section className="home-hero" ref={refHero}>
                     <h1 className="home-hero__title">Frontend developer with a background in digital design</h1>
                     <div className="home-hero__links">
                         <ButtonPrimary className="home-hero__links__item" to="/projects" text="Work"/>
@@ -48,18 +48,21 @@ function Home() {
                     </div>
                 </section>
 
-                <SelectedProjects/>
+                
+                <section className="home-selec-proj" ref={refProjFeed}>
+                    <SelecProjFeed />
+                </section>
 
-                <section className="home-about">
+                <section className="home-about" ref={refAbout}>
                     <h3 className="home-about__title">About</h3>
                     <p className="h1">I am Marina, a junior frontend developer passionate about desinging and coding clean and straightforward digital solutions with an edge.</p>
                     <ButtonPrimary className="home-about__btn" to="/info" text="Check + info" />
                 </section>
 
-                <section>
+                <section ref={refContact}>
                     <div className="home-contact">
                         <h3>Contact</h3>
-                        <ContactBlock/>
+                        <ContactInfo/>
                     </div>
                     <div className="home-copyright">
                         <p className="copyright-text">&#169;Marina Francés 2023</p>

@@ -1,0 +1,14 @@
+
+@import "../../scss/sass-variables";
+@import "../../scss/mixins";
+
+.selected-proj-feed {
+
+    &__title {
+        padding-bottom: clamp(2.4rem, 1.05vw + 1.99rem, 4rem);
+    }
+
+    &__btn {
+        padding-top: 6rem;
+    }
+}

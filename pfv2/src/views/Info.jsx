@@ -1,7 +1,7 @@
 
 import { useEffect } from "react";
 import ButtonPrimary from "../components/buttons/ButtonPrimary";
-import ContactBlock from "../components/contactBlock/ContactBlock";
+import ContactInfo from "../components/contactInfo/ContactInfo";
 import Topbar from "../components/topbar/Topbar";
 
 
@@ -48,10 +48,10 @@ function Info() {
 
                 <section className="info__contact">
                     <div>
-                        <h1 className="p--xlarge">Hey! I’m Marina, a junior frontend developer.</h1>
+                        <h1 className="p--xlarge">Hey! I’m Marina, a frontend developer.</h1>
                     </div>
 
-                    <ContactBlock className="contact-block--info-page" />
+                    <ContactInfo className="contact-block--info-page" />
                 </section>
 
                 <section className="info__bio">

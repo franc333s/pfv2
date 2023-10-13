@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "projectName": "Cuatro Cuatros",
+        "role": "Frontend",
+        "year": "2023",
+        "selectedProjectImg": "/images/projects/cuatrocuatros/cuatro-cuatros-selec-proj.png",
+        "selectedProjectImgAltText": "altTextWhatever",
+        "selectedProjectDesc": "Cuatro Cuatros is a Product Design Studio from Valencia (SP). This website was designed by Cuatro Cuatros and developed by me in Wordpress.",
+        "slug": "cuatro-cuatros"
+    },
+    {
+        "id": 2,
+        "projectName": "Crude",
+        "role": "Ux/Ui + Frontend",
+        "year": "2023",
+        "selectedProjectImg": "/images/projects/cuatrocuatros/cuatro-cuatros-selec-proj.png",
+        "selectedProjectImgAltText": "altTextWhatever",
+        "selectedProjectDesc": "Crude is an e-commerce project for an all-gender jewelry brand. This project involved the user experience and user interface (UX/UI) design followed by the development of an online sales platform with WooCommerce and WordPress.",
+        "slug": "crude"
+    },
+    {
+        "id": 3,
+        "projectName": "Mostrador",
+        "role": "Frontend",
+        "year": "2023",
+        "selectedProjectImg": "/images/projects/cuatrocuatros/cuatro-cuatros-selec-proj.png",
+        "selectedProjectImgAltText": "altTextWhatever",
+        "selectedProjectDesc": "Lorem ipsum",
+        "slug": "pokedex"
+    },
+    {
+        "id": 4,
+        "projectName": "Pokédex",
+        "role": "Ux/Ui + Frontend",
+        "year": "2023",
+        "selectedProjectImg": "/images/projects/cuatrocuatros/cuatro-cuatros-selec-proj.png",
+        "selectedProjectImgAltText": "altTextWhatever",
+        "selectedProjectDesc": "Lorem ipsum",
+        "slug": "pokedex"
+    }
+]

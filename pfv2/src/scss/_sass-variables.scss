@@ -18,6 +18,7 @@ $font-primary:'Jetbrains Mono', 'Courier New', Courier, monospace;
 $font-secondary:'Roboto Condensed', sans-serif;
 
 // Font weights
+$font-weight-xlight: 200;
 $font-weight-light: 300;
 $font-weight-regular: 400;
 $font-weight-bold: 700;
@@ -29,6 +30,7 @@ $font-topbar: $font-primary;
 
 // Font size implementations
 $font-size-topbar: 1.6rem;
+$font-size-topbar--large: 4rem;
 
 
 
