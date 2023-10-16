@@ -10,6 +10,14 @@
     padding-right: $vertical-padding;
 }
 
+.topbar-inner-margin-top {
+    margin-top: 20rem;
+
+    @include mq($bp-medium) {
+        margin-top: 0;
+    }
+}
+
 .topbar-offset-padding {
     padding-top: 7rem;
 }
@@ -58,5 +66,5 @@
 
 .footer-padding-top {
     padding-top: 8rem;
-
 }
+

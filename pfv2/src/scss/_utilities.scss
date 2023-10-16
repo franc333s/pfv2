@@ -5,19 +5,29 @@
 .display-flex {
     display: flex;
 }
-.justify-content--end {
+
+.justify-content-end {
     justify-content: end;
 }
 
+.position-relative {
+    position: relative;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
 
 .vertical-trim-line-height {
     line-height: 86%;
 }
 
-.copyright-text {
-    text-transform: uppercase;
-    font-size: 1.6rem;
-    padding: 8rem 0 2rem;
+.cursor-pointer {
+
+    @include mq($bp-lowermedium) {
+        cursor: pointer;
+    }
+
 }
 
 

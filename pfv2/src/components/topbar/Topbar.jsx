@@ -30,20 +30,43 @@ function Topbar({ scrollStage, className }) {
 
     return (
     <>
-        <div className={getTopbarClasses()}>
+        <nav className={getTopbarClasses()}>
             
-            <Link onClick={ closeMenu } to="/" className="topbar__home">Marina Francés</Link>
+            <Link onClick={ closeMenu } to="/" className="cursor-pointer">
+                <div>
+                    <div>
+                        Marina Francés
+                    </div>
+                </div>
+            </Link>
             
-            <button onClick={ toggleMenu } className="topbar__btn">Menu</button>
+            <button onClick={ toggleMenu } className="topbar__btn">
+                Menu
+            </button>
             
-            <nav className={ `topbar__nav ${ menu ? 'isActive' : '' }` }>
-                <ul className="topbar__nav__list">
-                    <li className="topbar__nav__list__item"><Link onClick={ closeMenu }  to="/projects" className="topbar__nav__item">Projects</Link></li>
-                    <li className="topbar__nav__list__item"><Link onClick={ closeMenu } to="/info" className="topbar__nav__item">Info</Link></li>
-                </ul>
-            </nav>
+            <ul className={ `topbar__nav ${ menu ? 'isActive' : '' }` }>
+                <li className="topbar__nav__item">
+                    <Link onClick={ closeMenu }  to="/projects" className="topbar-inner-margin-top hover-effect">
+                        <div className="overflow-hidden position-relative hover-effect__inner" data-text="Projects">
+                            <div className="hover-effect__text">
+                                Projects
+                            </div>
+                        </div>
+                    </Link>
+                </li>
 
-        </div>
+                <li className="topbar__nav__item">
+                    <Link onClick={ closeMenu } to="/info" className="hover-effect">
+                        <div className="overflow-hidden position-relative hover-effect__inner" data-text="Info">
+                            <div className="hover-effect__text">
+                                Info
+                            </div>
+                        </div>
+                    </Link>
+                </li>
+            </ul>
+
+        </nav>
     </>
     )
 }

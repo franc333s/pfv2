@@ -14,6 +14,7 @@ function Home() {
     const [refProjFeed, inViewProjFeed] = useInView({ threshold: 0.2, })
     const [refAbout, inViewAbout] = useInView({ threshold: 0.2, })
     const [refContact, inViewContact] = useInView({ threshold: 0.2, })
+    //check threshold, it does not work properly
 
     const updateScrollStage = () => {
         if (inViewHero) {
@@ -56,7 +57,7 @@ function Home() {
                 <section className="home-about" ref={refAbout}>
                     <h3 className="home-about__title">About</h3>
                     <p className="h1">I am Marina, a junior frontend developer passionate about desinging and coding clean and straightforward digital solutions with an edge.</p>
-                    <ButtonPrimary className="home-about__btn" to="/info" text="Check + info" />
+                    <ButtonPrimary className="home-about__btn text-color-yellow svg-color-yellow" to="/info" text="Check + info" />
                 </section>
 
                 <section ref={refContact}>
@@ -65,7 +66,7 @@ function Home() {
                         <ContactInfo/>
                     </div>
                     <div className="home-copyright">
-                        <p className="copyright-text">&#169;Marina Francés 2023</p>
+                        <p className="p--small-fixed">&#169;Marina Francés 2023</p>
                     </div>
                     
                 </section>

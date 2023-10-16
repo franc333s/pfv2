@@ -15,38 +15,13 @@
     text-transform: uppercase;
     font-weight: $font-weight-light;
 
-    padding-left: $vertical-padding;
-    padding-right: $vertical-padding;
-    padding-top: 2.4rem;
-    padding-bottom: 2.4rem;
+    padding: 2.4rem $vertical-padding;
 
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
 
-    &__home {
-        cursor: pointer;
-        z-index: 3;
-
-        &:hover {
-            color: $color-yellow;
-            box-shadow: none;
-        }
-    }
-
     &__btn {
-        font-family: $font-primary;
-        font-size: $font-size-topbar;
-        text-transform: uppercase;
-        font-weight: $font-weight-light;
-        cursor: pointer;
-        z-index: 3;
-        padding-right: 0;
-
-        &:hover {
-            color: $color-yellow;
-            box-shadow: none;
-        }
 
         @include mq($bp-medium) {
             display: none;
@@ -58,7 +33,25 @@
         height: 0;
         overflow: hidden;
         transition: all .5s ease;
-        z-index: 3;
+
+        //changes to move out just in case
+        display: flex;
+        flex-direction: column;
+
+        //padding-bottom: 8rem;
+        //height: 100%;
+
+
+        @include mq($bp-medium) {
+            flex-direction: row;
+            gap: 4rem;
+            margin-top: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            //height: auto;
+        }
+        //enf of changes
+
 
         @include mq($bp-medium) {
             height: auto;
@@ -70,76 +63,39 @@
             opacity: 1;
         }
 
-        &__list {
+        &__item {
             display: flex;
-            flex-direction: column;
-
-            font-family: $font-topbar;
-            font-size: $font-size-topbar;
-            border-radius: 1rem;
-
-            margin-top: 20rem;
-            padding-bottom: 8rem;
-            z-index: 3;
-            height: 100%;
+            justify-content: center;
+            padding-top: 4rem;
+            font-size: $font-size-topbar--large;
 
 
-            @include mq($bp-medium) {
-                display: flex;
-                flex-direction: row;
-
-                gap: 4rem;
-                margin-top: 0;
-                padding-top: 0;
-                padding-bottom: 0;
-
-                font-family: $font-topbar;
-                border-radius: 0;
-                height: auto;
+            &:hover {
+                
             }
 
-            &__item {
-                display: flex;
-                justify-content: center;
-                padding-top: 2rem;
-                padding-bottom: 2rem;
-                font-size: $font-size-topbar--large;
-                font-weight: $font-weight-light;
-                z-index: 3;
-
-                &:hover {
-                    color: $color-yellow;
-                    box-shadow: none;
-                }
-
-                @include mq($bp-medium) {
-                    flex-direction: row;
-                    padding-top: 0;
-                    padding-bottom: 0;
-                    font-size: $font-size-topbar;
-                    font-weight: $font-weight-light;
-                }
+            @include mq($bp-medium) {
+                flex-direction: row;
+                padding-top: 0;
+                font-size: $font-size-topbar;
             }
         }
     }
 
-    // Changes in scroll
 
+    // Changes when scrolling
     &.stage1 {
         background-color: $color-bg-white;
         color: $color-black;
         transition: background-color 0.5s;
-    
-    
     }
-    
+
     &.stage2 {
         background-color: $color-bg-blue;
         color: $color-white;
         transition: background-color 0.5s;
     }
-    
-    
+
     &.stage3 {
         background-color: $color-bg-green;
         color: $color-white;
@@ -151,8 +107,6 @@
         color: $color-white;
         transition: background-color 0.5s;
     }
-
-
 }
 
 

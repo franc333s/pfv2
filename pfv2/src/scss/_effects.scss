@@ -1,14 +1,23 @@
 @import "./sass-variables";
 @import "./mixins";
 
-/* Etapa 1 */
+
+// Background-color change
+// Etapa 1
 .stage1 {
     background-color: $color-bg-white;
     color: $color-black;
     transition: background-color .5s;
+
+    & [data-text]:hover {
+
+        @include mq($bp-medium) {
+            color: $color-green;
+        }
+    }
 }
 
-/* Etapa 2 */
+// Etapa 2
 .stage2 {
     background-color: $color-bg-blue;
     color: $color-white;
@@ -22,7 +31,7 @@
     }
 }
 
-/* Etapa 3 */
+// Etapa 3
 .stage3 {
     background-color: $color-bg-green;
     color: $color-white;
@@ -35,9 +44,53 @@
     }
 }
 
-/* Etapa 4 */
+// Etapa 4
 .stage4 {
     background-color: $color-bg-black;
     color: $color-white;
     transition: background-color .5s;
+}
+
+
+
+
+// Hover effect
+
+.hover-effect {
+
+    @include mq($bp-medium) {
+
+        &__inner:after,
+        &__text {
+            transition: transform .75s cubic-bezier(.19,1,.22,1);
+        }
+
+        &__inner:after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: translateY(100%);
+        }
+
+        &:hover .hover-effect__text {
+            transform: translateY(-100%);
+        }
+        
+        &:hover .hover-effect__inner:after {
+            transform: translateY(0);
+        }
+    }
+}
+
+
+
+[data-text]:hover {
+
+    @include mq($bp-medium) {
+        color: $color-yellow;
+        font-weight: $font-weight-bold;
+    }
 }

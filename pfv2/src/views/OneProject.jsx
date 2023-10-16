@@ -39,7 +39,7 @@ function OneProject() {
                     linkGithub={project.linkGithub}
                 />
 
-                <div className="display-flex justify-content--end">
+                <div className="display-flex justify-content-end">
                     <ButtonPrimary className="text-color-green svg-color-green" to="/projects" text="Return to all projects" />
                 </div>
             </main>
