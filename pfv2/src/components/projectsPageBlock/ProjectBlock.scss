@@ -3,25 +3,22 @@
 
 
 .project-block {
+    color: $color-white;
+    text-align: center;
+    padding-bottom: clamp(5.2rem, 3.14vw + 3.98rem, 10rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     max-width: 100rem;
-    padding-bottom: clamp(5.2rem, 3.14vw + 3.98rem, 10rem);
-
-    color: $color-white;
-    text-align: center;
 
     &__tech {
-        font-size: clamp(1.6rem, 0.26vw + 1.5rem, 2rem);;
+        font-size: clamp(1.6rem, 0.26vw + 1.5rem, 2rem);
     }
-    
 
     &__desc {
         font-size: clamp(1.6rem, 0.26vw + 1.5rem, 2rem);
-        
     }
 
     &__btn {

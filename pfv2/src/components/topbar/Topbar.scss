@@ -9,14 +9,11 @@
     left: 0;
     width: 100%;
     z-index: 3;
-
+    padding: 2.4rem $vertical-padding;
     font-family: $font-topbar;
     font-size: $font-size-topbar;
     text-transform: uppercase;
     font-weight: $font-weight-light;
-
-    padding: 2.4rem $vertical-padding;
-
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -34,13 +31,8 @@
         overflow: hidden;
         transition: all .5s ease;
 
-        //changes to move out just in case
         display: flex;
         flex-direction: column;
-
-        //padding-bottom: 8rem;
-        //height: 100%;
-
 
         @include mq($bp-medium) {
             flex-direction: row;
@@ -48,10 +40,7 @@
             margin-top: 0;
             padding-top: 0;
             padding-bottom: 0;
-            //height: auto;
         }
-        //enf of changes
-
 
         @include mq($bp-medium) {
             height: auto;
@@ -69,11 +58,6 @@
             padding-top: 4rem;
             font-size: $font-size-topbar--large;
 
-
-            &:hover {
-                
-            }
-
             @include mq($bp-medium) {
                 flex-direction: row;
                 padding-top: 0;
@@ -81,7 +65,6 @@
             }
         }
     }
-
 
     // Changes when scrolling
     &.stage1 {

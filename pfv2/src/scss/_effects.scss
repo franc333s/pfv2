@@ -52,10 +52,7 @@
 }
 
 
-
-
 // Hover effect
-
 .hover-effect {
 
     @include mq($bp-medium) {
@@ -84,7 +81,6 @@
         }
     }
 }
-
 
 
 [data-text]:hover {
