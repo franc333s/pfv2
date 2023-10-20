@@ -8,8 +8,25 @@ function Footer({ className }) {
         <>
             <footer className={`${className || ""}`}>
                 <ul className="footer vertical-padding">
-                    <li className="footer__item"><Link to={"mailto:marinafase@gmail.com"}>Contact</Link></li>
-                    <li className="footer__item"><Link to="/info">Info</Link></li>
+                    <li className="footer__item">
+                        <Link className="hover-effect" to={"mailto:marinafase@gmail.com"}> 
+                            <div className="overflow-hidden position-relative hover-effect__inner" data-text="Contact">
+                                <div className="hover-effect__text">
+                                    Contact
+                                </div>
+                            </div>
+                        </Link>
+                    </li>
+                    <li className="footer__item">
+                        <Link className="hover-effect" to="/info">
+                            <div className="overflow-hidden position-relative hover-effect__inner" data-text="Info">
+                                <div className="hover-effect__text">
+                                    Info
+                                </div>
+                            </div>
+                            
+                        </Link>
+                    </li>
                     <li className="footer__item">&#169;2023</li>
                 </ul>
             </footer>

@@ -22,6 +22,10 @@
     line-height: 86%;
 }
 
+.vertical-trim-line-height--soft {
+    line-height: 110%;
+}
+
 .cursor-pointer {
 
     @include mq($bp-lowermedium) {

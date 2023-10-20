@@ -13,12 +13,28 @@ function ContactInfo ({ className }) {
 
                 <div>
                     <div className="contact-block__item">
-                        <h4 className="vertical-trim-line-height"><Link to="mailto:apellidofrances@gmail.com">Email</Link></h4>
+                        <h4 className="vertical-trim-line-height">
+                            <Link className="hover-effect" to="mailto:marinafase@gmail.com">
+                                <div className="overflow-hidden position-relative hover-effect__inner" data-text="Email">
+                                    <div className="hover-effect__text">
+                                       Email
+                                    </div>
+                                </div>
+
+                            </Link></h4>
                         <h5>marinafase@gmail.com</h5>
                     </div>
                     
                     <div className="contact-block__item">
-                        <h4 className="vertical-trim-line-height"><Link to="https://www.linkedin.com/in/mrnfrncs/">Linkedin</Link></h4>
+                        <h4 className="vertical-trim-line-height">
+                            <Link className="hover-effect" target="_blank" to="https://www.linkedin.com/in/mrnfrncs/">
+                                <div className="overflow-hidden position-relative hover-effect__inner" data-text="Linkedin">
+                                    <div className="hover-effect__text">
+                                        Linkedin
+                                    </div>
+                                </div>
+                            </Link>
+                        </h4>
                         <h5>/mrnfrncs</h5>
                     </div>
                 </div>
@@ -29,17 +45,41 @@ function ContactInfo ({ className }) {
                 <p  className="contact-block__p">follow me at:</p>
                 <div>
                     <div className="contact-block__item">
-                        <h4 className="vertical-trim-line-height"><Link to="https://github.com/franc333s">Github</Link></h4>
+                        <h4 className="vertical-trim-line-height">
+                            <Link className="hover-effect" target="_blank" to="https://github.com/franc333s">
+                                <div className="overflow-hidden position-relative hover-effect__inner" data-text="Linkedin">
+                                    <div className="hover-effect__text">
+                                        Github
+                                    </div>
+                                 </div>
+                            </Link>
+                        </h4>
                         <h5>/franc333s</h5>
                     </div>
 
                     <div className="contact-block__item">
-                        <h4 className="vertical-trim-line-height"><Link to="https://www.behance.net/apellidofrances">Behance</Link></h4>
+                        <h4 className="vertical-trim-line-height">
+                            <Link className="hover-effect" target="_blank" to="https://www.behance.net/apellidofrances">
+                                <div className="overflow-hidden position-relative hover-effect__inner" data-text="Linkedin">
+                                    <div className="hover-effect__text">
+                                        Behance
+                                    </div>
+                                </div>
+                            </Link>
+                        </h4>
                         <h5>@apellidofrances</h5>
                     </div>
 
                     <div className="contact-block__item">
-                        <h4 className="vertical-trim-line-height"><Link to="https://dribbble.com/apellidofrances">Dribbble</Link></h4>
+                        <h4 className="vertical-trim-line-height">
+                            <Link className="hover-effect" target="_blank" to="https://dribbble.com/apellidofrances">
+                                <div className="overflow-hidden position-relative hover-effect__inner" data-text="Dribbble">
+                                    <div className="hover-effect__text">
+                                        Dribbble
+                                    </div>
+                                </div>
+                            </Link>
+                        </h4>
                         <h5>@apellidofrances</h5>
                     </div>
                 </div>

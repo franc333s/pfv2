@@ -12,7 +12,7 @@ function ProjectDesc({ projectName, projectURL, projectDescription, projectImg }
         <>
             <section className="project-desc">
                 <div className="project-desc__top">
-                    <h1 className="text-color-blue h2 vertical-trim-line-height">{projectName}</h1>
+                    <h1 className="text-color-blue h2 vertical-trim-line-height--soft">{projectName}</h1>
                     <ButtonPrimary className="text-color-green svg-color-green" to={projectURL} text="Visit Website" openInNewTab={true} />
                 </div>
                 <div className="project-desc__bottom">

@@ -1,8 +1,6 @@
 @import "../../../scss/sass-variables";
 @import "../../../scss/mixins";
 
-
-
 .project-desc {
 
     &__top {
@@ -10,22 +8,29 @@
         flex-direction: column;
         gap: 1.2rem;
 
+        @include mq($bp-lowermedium) {
+            padding-top: clamp(2rem, 1.31vw + 1.49rem, 4rem);
+        }
+
         @include mq($bp-uppermedium) {
             flex-direction: row;
             justify-content: space-between;
             align-items: end;
         }
-
     }
 
     &__bottom {
-        padding-top: clamp(2.4rem, 3.14vw + 1.18rem, 7.2rem);
-        padding-bottom: clamp(2.4rem, 3.14vw + 1.18rem, 7.2rem);
+        padding-top: clamp(4rem, 2.09vw + 3.18rem, 7.2rem);
+        padding-bottom: 7.2rem;
+
+        @include mq($bp-lowermedium) {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            justify-content: space-between;
+        }
 
         @include mq($bp-medium) {
-            display: grid;
             grid-template-columns: 3fr 1fr;
-            justify-content: space-between;
         }
 
         &__p {
@@ -34,14 +39,16 @@
 
         &__img {
             padding-top: 4.2rem;
-            width: clamp(22.4rem, 6.54vw + 19.85rem, 32.4rem);
+            width: 100%;
             justify-self: flex-end;
             border-radius: 2px;
-            //box-shadow: 0 0 4px $color-bg-black;
+
+            @include mq($bp-lowermedium) {
+                padding-top: 0;
+            }
 
             @include mq($bp-medium) {
-                padding-top: 0;
-
+                width: clamp(22.4rem, 6.54vw + 19.85rem, 32.4rem);
             }
         }
     }

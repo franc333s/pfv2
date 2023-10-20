@@ -32,9 +32,9 @@ function Topbar({ scrollStage, className }) {
     <>
         <nav className={getTopbarClasses()}>
             
-            <Link onClick={ closeMenu } to="/" className="cursor-pointer">
-                <div>
-                    <div>
+            <Link onClick={ closeMenu } to="/" className="cursor-pointer hover-effect">
+                <div className="overflow-hidden position-relative hover-effect__inner" data-text="Marina Francés">
+                    <div className="hover-effect__text">
                         Marina Francés
                     </div>
                 </div>
