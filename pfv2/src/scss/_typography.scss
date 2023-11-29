@@ -59,3 +59,13 @@ h5,
     font-size: 1.6rem;
     padding: 8rem 0 2rem;
 }
+
+.p--portfolio {
+    color: $color-white;
+    font-size: clamp(3.2rem, 1.44vw + 2.64rem, 5.4rem);
+    text-transform: uppercase;
+
+    &:visited {
+        color: $color-white;
+    }
+}

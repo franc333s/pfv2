@@ -33,6 +33,10 @@
     }
 }
 
+.text-transform--uppercase {
+    text-transform: uppercase;
+}
+
 
 // Loop for text color, background color and svg color
 @each $color, $i in $map-colors {

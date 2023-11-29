@@ -66,3 +66,28 @@
         }
     }
 }
+
+.portfolio {
+    min-height: calc(100vh - 4.2rem);
+    padding-top: 10rem;
+
+    &--flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        @include mq($bp-medium) {
+            flex-direction: row;
+        }
+    } 
+
+    &__title {
+        padding-top: 10rem;
+    }
+
+    &__content {
+        padding-top: 6rem;
+    
+}
+}
