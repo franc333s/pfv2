@@ -1,0 +1,52 @@
+@import "../../../scss/sass-variables";
+@import "../../../scss/mixins";
+
+.uxui-project-intro {
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
+        @include mq($bp-lowermedium) {
+            padding-top: clamp(2rem, 1.31vw + 1.49rem, 4rem);
+        }
+
+        @include mq($bp-uppermedium) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: end;
+        }
+    }
+
+    &__bottom {
+        padding-top: clamp(4rem, 2.09vw + 3.18rem, 7.2rem);
+        padding-bottom: 4rem;
+
+
+
+        @include mq($bp-medium) {
+            grid-template-columns: 3fr 1fr;
+        }
+
+        &__p {
+            font-size: clamp(2rem, 0.77vw + 1.72rem, 3.2rem);
+        }
+
+        
+        &__img {
+            padding-top: 4.2rem;
+            width: 100%;
+            justify-self: flex-end;
+            border-radius: 2px;
+
+            @include mq($bp-lowermedium) {
+                padding-top: 0;
+            }
+
+            @include mq($bp-medium) {
+                width: clamp(22.4rem, 6.54vw + 19.85rem, 32.4rem);
+            }
+        }
+    }
+}

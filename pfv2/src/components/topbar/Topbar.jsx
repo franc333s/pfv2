@@ -46,10 +46,20 @@ function Topbar({ scrollStage, className }) {
             
             <ul className={ `topbar__nav ${ menu ? 'isActive' : '' }` }>
                 <li className="topbar__nav__item">
-                    <Link onClick={ closeMenu }  to="/projects" className="topbar-inner-margin-top hover-effect">
-                        <div className="overflow-hidden position-relative hover-effect__inner" data-text="Projects">
+                    <Link onClick={ closeMenu }  to="/projects/dev" className="topbar-inner-margin-top hover-effect">
+                        <div className="overflow-hidden position-relative hover-effect__inner" data-text="Dev Projects">
                             <div className="hover-effect__text">
-                                Projects
+                                Dev Projects
+                            </div>
+                        </div>
+                    </Link>
+                </li>
+
+                <li className="topbar__nav__item">
+                    <Link onClick={ closeMenu }  to="/projects/uxui" className="topbar-inner-margin-top hover-effect">
+                        <div className="overflow-hidden position-relative hover-effect__inner" data-text="Ux/ui Projects">
+                            <div className="hover-effect__text">
+                                Ux/ui Projects
                             </div>
                         </div>
                     </Link>

@@ -6,7 +6,7 @@ import './ProjectBlock.scss'
 
 function ProjectBlock({ slug, projectName, role, year, projectSummary }) {
 
-    const projectSlug = `/projects/${slug}`;
+    const projectSlug = `/projects/dev/${slug}`;
 
 
     return (
