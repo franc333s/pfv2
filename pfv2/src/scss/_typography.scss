@@ -3,7 +3,8 @@
 
 h1,
 .h1 {
-    font-size: clamp(3rem, 4.18vw + 1.64rem, 8.33rem);
+    //font-size: clamp(3rem, 4.18vw + 1.64rem, 8.33rem);
+    font-size: clamp(3.2rem, 3.79vw + 1.72rem, 9rem);
     font-weight: $font-weight-light;
 }
 
@@ -42,10 +43,16 @@ h5,
     font-weight: $font-weight-xlight;
 }
 
+.p--lowermedium {
+    font-size: clamp(2rem, 0.26vw + 1.9rem, 2.4rem);
+    margin-inline-start: -0.5rem;
+    padding-bottom: 2rem;
+}
+
+
 .p--medium {
     font-size: clamp(2rem, 0.65vw + 1.75rem, 3rem);
     font-weight: $font-weight-xlight;
-
 }
 
 .p--xlarge {

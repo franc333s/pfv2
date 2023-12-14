@@ -41,7 +41,8 @@ function Home() {
             <main className={`vertical-padding topbar-offset-padding stage${scrollStage}`}>
 
                 <section className="home-hero" ref={refHero}>
-                    <h1 className="home-hero__title">Frontend developer with a background in digital design</h1>
+                    <p className="p--lowermedium"><span className="text-transform--uppercase">¡Hola!</span> I&lsquo;m Marina, a</p>
+                    <h1 className="home-hero__title">Frontend developer and UX/UI designer based in València</h1>
                     <div className="home-hero__links">
                         <ButtonPrimary className="home-hero__links__item" to="/projects" text="Work"/>
                         <ButtonPrimary className="home-hero__links__item" to="/info" text="About"/>
