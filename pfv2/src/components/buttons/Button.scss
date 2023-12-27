@@ -11,9 +11,35 @@ svg {
     &--primary {
         font-size: clamp(2rem, 0.26vw + 1.9rem, 2.4rem);
         text-transform: uppercase;
+        transition: all .2s ease-in-out;
 
         & svg {
             padding-right: .6rem;
+        }
+
+        &:hover {
+            transform: translate(0, -.8rem);
+        }
+    }
+
+    &--secondary  {
+        background-color: $color-bg-green;
+        padding: clamp(1.2rem, 0.26vw + 1.1rem, 1.6rem) clamp(1.4rem, 0.26vw + 1.3rem, 1.8rem);
+        margin: .2rem 0 2rem;
+        border-radius: 4rem;
+        transition: all .2s ease-in-out;
+
+        & svg {
+            fill: $color-bg-white;
+            height: clamp(1.6rem, 0.26vw + 1.5rem, 2rem);
+        }
+
+        &:hover {
+
+            @include mq($bp-medium) {
+                transform: translate(0, -.8rem);
+            }
+            
         }
     }
 }

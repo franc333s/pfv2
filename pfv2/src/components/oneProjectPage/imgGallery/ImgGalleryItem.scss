@@ -1,0 +1,18 @@
+@import "../../../scss/sass-variables";
+@import "../../../scss/mixins";
+
+
+
+.img-gallery__item {
+    //padding: clamp(1.2rem, 1.83vw + 0.49rem, 4rem) 0 clamp(4rem, 1.83vw + 3.29rem, 6.8rem);
+    
+    &__inner {
+        width: 100%;
+        box-shadow: 0 0 .4rem $color-bg-gray;
+        border-radius: .4rem;
+    }
+
+    & + & {
+        padding-top: 4rem;
+    }
+}

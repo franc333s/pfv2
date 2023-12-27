@@ -1,20 +1,33 @@
 import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
 import ButtonPrimary from "../components/buttons/ButtonPrimary";
+import ProjectHero from "../components/oneProjectPage/projectHero/ProjectHero";
 import ProjectDesc from "../components/oneProjectPage/projectDesc/ProjectDesc";
-import ProjectSpecs from "../components/oneProjectPage/projectSpecs/ProjectSpecs";
 import Topbar from "../components/topbar/Topbar";
 import Footer from "../components/footer/Footer";
+import ImgGallery from "../components/oneProjectPage/imgGallery/ImgGallery";
 
 
 import projectsData from "../json/projectsData.json";
 
 
-function DevOneProject() {
 
+function OneProject() {
 
     const { slug } = useParams();
+    const [project, setProject] = useState(null);
 
-    const project = projectsData.find((project) => project.slug === slug);
+    useEffect(() => {
+        const foundProject = projectsData.find((project) => project.slug === slug);
+        setProject(foundProject);
+    }, [slug]);
+
+
+    // const project = projectsData.find((project) => project.slug === slug);
+
+
+
+
 
     return (
         <>
@@ -24,14 +37,19 @@ function DevOneProject() {
 
             <main className="topbar-offset-padding vertical-padding">
                 
-                <ProjectDesc 
+                {project && (
+                    <>
+
+                <ProjectHero 
                     projectName={project.projectName}
                     projectURL={project.projectURL}
-                    projectDescription={project.projectDescription}
-                    projectImg={project.projectImg}
+                    projectImgHeroMob={project.projectImgHeroMob}
+                    projectImgHeroDesk={project.projectImgHeroDesk}
+                    projectImgHeroAltText={project.projectImgHeroAltText}
                 />
 
-                <ProjectSpecs 
+                <ProjectDesc 
+                    projectDescription={project.projectDescription}
                     role={project.role}
                     tech={project.tech}
                     month={project.month}
@@ -39,17 +57,22 @@ function DevOneProject() {
                     linkGithub={project.linkGithub}
                 />
 
+
+                <ImgGallery project={project}
+                />
+
                 <div className="display-flex justify-content-end  padding-top--4">
                     <ButtonPrimary className="text-color-green svg-color-green" to="/projects" text="Return to all projects" />
                 </div>
+              </>
+                )}
             </main>
         
             <Footer className="footer-padding-top"/>
-
 
            
         </>
     )
 }
 
-export default DevOneProject;
+export default OneProject;

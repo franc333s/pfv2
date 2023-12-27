@@ -25,6 +25,7 @@ function DevProjectsPage() {
                             role={project.role}
                             year={project.year}
                             projectSummary={project.projectSummary}
+                            tag={project.tag}
                         />
                     )}
                 </div>

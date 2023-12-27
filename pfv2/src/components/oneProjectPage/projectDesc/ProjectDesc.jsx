@@ -1,30 +1,53 @@
-import ButtonPrimary from "../../buttons/ButtonPrimary"
 
+import { Link } from "react-router-dom"
+import ArrowRight from "../../arrows/ArrowRight";
 import "./ProjectDesc.scss"
 
+const renderParagraphs = (text) => {
+    const formattedText = text.replace(/\n/g, "\n\n");
+    return formattedText.split("\n\n").map((paragraph, index) => (
+      <p className="project-desc__text" key={index}>{paragraph}</p>
+    ));
+  };
+
+  const ProjectDesc = ({ projectDescription, role, tech, month, year, linkGithub }) => {
 
 
-
-function ProjectDesc({ projectName, projectURL, projectDescription, projectImg }) {
 
 
     return (
-        <>
+        <> 
             <section className="project-desc">
-                <div className="project-desc__top">
-                    <h1 className="text-color-blue h2 vertical-trim-line-height--soft">{projectName}</h1>
-                    <ButtonPrimary className="text-color-green svg-color-green" to={projectURL} text="Visit Website" openInNewTab={true} />
-                </div>
-                <div className="project-desc__bottom">
-                    <p className="project-desc__bottom__p">{projectDescription}</p>
-                    <img className="project-desc__bottom__img" src={projectImg} alt="" />
-                </div>
-            </section>
 
+                <p className="p--medium">
+                {renderParagraphs(projectDescription)}
+                </p>
+
+                <aside className="project-desc__specs">
+
+                    <div className="project-desc__group">
+                        <h3 className="project-desc__group__item project-desc__h3">role</h3>
+                        <p className="project-desc__group__item project-desc__p">{role}</p>
+                    </div>
+
+                    <div className="project-desc__group">
+                        <h3 className="project-desc__group__item project-desc__h3">tech</h3>
+                        <p className="project-desc__group__item project-desc__p">{tech}</p>
+                    </div>
+
+                    <div className="project-desc__group">
+                        <h3 className="project-desc__group__item project-desc__h3">date</h3>
+                        <p className="project-desc__group__item project-desc__p">{month} {year}</p>
+                    </div>
+
+                </aside>
+                
+            </section>
+            <div className="project-desc-github">
+                <p className="project-desc-github__p text-color-green">Check this project on <Link className="project-desc-github__link" to={linkGithub} target="_blank">Github</Link>.</p>
+            </div>
         </>
     )
-
 }
 
 export default ProjectDesc
-

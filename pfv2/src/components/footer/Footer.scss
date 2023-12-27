@@ -8,7 +8,7 @@
     color: $color-white;
     background-color: $color-bg-black;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 0.38vw + 1.45rem, 2rem);
     padding-top: .8rem;
     padding-bottom: .8rem;
 

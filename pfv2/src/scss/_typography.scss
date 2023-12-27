@@ -12,6 +12,12 @@ h2,
 .h2 {
     font-size: clamp(6rem, 2.61vw + 4.98rem, 10rem);
     font-weight: $font-weight-light;
+    
+
+    &--variation {
+        font-size: clamp(4.4rem, 2.35vw + 3.48rem, 8rem);
+        margin-inline-start: -0.5rem;
+    }
 }
 
 h3,

@@ -4,30 +4,78 @@
 
 .project-block {
     color: $color-white;
-    text-align: center;
     padding-bottom: clamp(5.2rem, 3.14vw + 3.98rem, 10rem);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    max-width: 100rem;
+    gap: .4rem;
 
-    &__tech {
-        font-size: clamp(1.6rem, 0.26vw + 1.5rem, 2rem);
+    @include mq($bp-medium) {
+        display: grid;
+        grid-template-columns: 1fr .65fr;
+        gap: 2rem;
     }
 
-    &__desc {
-        font-size: clamp(1.6rem, 0.26vw + 1.5rem, 2rem);
+    @include mq($bp-uppermedium) {
+        grid-template-columns: 1fr .35fr;
+        gap: 2;
     }
 
-    &__btn {
+    &__title {
         color: $color-yellow;
-        font-size: clamp(2rem, 0.26vw + 1.9rem, 2.4rem);
-        padding-top: clamp(2.8rem, 0.78vw + 2.49rem, 4rem);;
+        font-size: clamp(5rem, 6.59vw + 2.36rem, 15rem);
+        text-transform: uppercase;
+        padding-bottom: 1.2rem;
 
-        & > svg {
-            fill: $color-bg-yellow;
+        @include mq($bp-medium) {
+            color: $color-white;
+            transition: all .2s ease-in-out;
+            padding-bottom: 0;
+
+            &:hover {
+                color: $color-yellow;
+                transform: translate(0, -.8rem);
+            }
         }
     }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+
+
+        &__tech,
+        &__desc,
+        &__tag {
+            font-size: 1.6rem;
+        }
+    
+        &__tech {
+            font-weight: $font-weight-bold;
+        }
+
+        &__tag {
+            font-style: italic;
+            padding: .4rem;
+            width: 6rem;
+            text-align: center;
+            border: 1px white solid;
+            border-radius: 4rem;
+        }
+
+        &__btn {
+            font-size: 2rem;
+            color: $color-yellow;
+            font-size: clamp(2rem, 0.26vw + 1.9rem, 2.4rem);
+            padding-top: 2.4rem;
+    
+            & > svg {
+                fill: $color-bg-yellow;
+            }
+        }
+    }
+
+
+
+    
 }
