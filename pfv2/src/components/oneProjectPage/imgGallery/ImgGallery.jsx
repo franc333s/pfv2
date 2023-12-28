@@ -12,6 +12,7 @@ function ImgGallery({ project }) {
                     imgGalleryItemMob={item.imgGalleryItemMob}
                     imgGalleryItemDesk={item.imgGalleryItemDesk}
                     imgGalleryItemAltText={item.imgGalleryItemAltText}
+                    imgGalleryText={item.imgGalleryText}
                 />
             )}
         </div>

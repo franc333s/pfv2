@@ -1,19 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { useParams } from "react-router-dom";
-
-
-// import projectsData from "../json/projectsData.json";
-
 import { collection, getDocs, query, where } from "firebase/firestore";
 import db from "../firebase/config";
 
+import Topbar from "../components/topbar/Topbar";
+import ButtonPrimary from "../components/buttons/ButtonPrimary";
+import Footer from "../components/footer/Footer";
 
-const Topbar = React.lazy(() => import ("../components/topbar/Topbar"));
-const ButtonPrimary = React.lazy(() => import ("../components/buttons/ButtonPrimary"));
-const ProjectHero = React.lazy(() => import ("../components/oneProjectPage/projectHero/ProjectHero"));
-const ProjectDesc = React.lazy(() => import ("../components/oneProjectPage/projectDesc/ProjectDesc"));
-const ImgGallery = React.lazy(() => import ("../components/oneProjectPage/imgGallery/ImgGallery"));
-const Footer = React.lazy(() => import ("../components/footer/Footer"));
+const LazyProjectHero = React.lazy(() => import ("../components/oneProjectPage/projectHero/ProjectHero"));
+const LazyProjectDesc = React.lazy(() => import ("../components/oneProjectPage/projectDesc/ProjectDesc"));
+const LazyImgGallery = React.lazy(() => import ("../components/oneProjectPage/imgGallery/ImgGallery"));
 
 
 function OneProject() {
@@ -21,18 +17,6 @@ function OneProject() {
     const { slug } = useParams();
     const [project, setProject] = useState(null);
 
-    
-
-    // useEffect(() => {
-    //     const foundProject = projectsData.find((project) => project.slug === slug);
-    //     setProject(foundProject);
-    // }, [slug]);
-
-
-    // const project = projectsData.find((project) => project.slug === slug);
-
-
-    //
     useEffect(() => {
         const obtainProject = async () => {
             try {
@@ -50,8 +34,6 @@ function OneProject() {
 
         obtainProject();
     }, [slug]);
-    //
-
 
 
 
@@ -65,33 +47,37 @@ function OneProject() {
                 
                 {project && (
 
-<>
-                <ProjectHero 
-                    projectName={project.projectName}
-                    projectURL={project.projectURL}
-                    projectImgHeroMob={project.projectImgHeroMob}
-                    projectImgHeroDesk={project.projectImgHeroDesk}
-                    projectImgHeroAltText={project.projectImgHeroAltText}
-                />
+                <>
+                <Suspense fallback={<div>Project loading</div>}> 
+                    <LazyProjectHero 
+                        projectName={project.projectName}
+                        projectURL={project.projectURL}
+                        projectImgHeroMob={project.projectImgHeroMob}
+                        projectImgHeroDesk={project.projectImgHeroDesk}
+                        projectImgHeroAltText={project.projectImgHeroAltText}
+                    />
 
-                <ProjectDesc 
-                    projectDescription={project.projectDescription}
-                    role={project.role}
-                    tech={project.tech}
-                    month={project.month}
-                    year={project.year}
-                    linkGithub={project.linkGithub}
-                />
+                    <LazyProjectDesc 
+                        projectDescription={project.projectDescription}
+                        role={project.role}
+                        tech={project.tech}
+                        month={project.month}
+                        year={project.year}
+                        linkGithub={project.linkGithub}
+                    />
 
 
-                <ImgGallery project={project}
-                />
+                    <LazyImgGallery 
+                        project={project}
+                    />
+                </Suspense>
 
                 <div className="display-flex justify-content-end  padding-top--4">
                     <ButtonPrimary className="text-color-green svg-color-green" to="/projects" text="Return to all projects" />
                 </div>
+                
                 </>
-                 )}
+                )}
             </main>
         
             <Footer className="footer-padding-top"/>

@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { useInView } from "react-intersection-observer";
 import ButtonPrimary from "../components/buttons/ButtonPrimary";
 import ContactInfo from "../components/contactInfo/contactInfo";
-import SelecProjFeed from "../components/projectsHomePage/SelecProjFeed";
 import Topbar from "../components/topbar/Topbar";
+
+const LazySelecProjFeed = React.lazy(() => import("../components/projectsHomePage/SelecProjFeed"));
 
 
 function Home() {
@@ -52,7 +53,9 @@ function Home() {
 
                 
                 <section className="home-selec-proj" ref={refProjFeed}>
-                    <SelecProjFeed />
+                    <Suspense fallback={<div>Selected projects loading</div>}>
+                        <LazySelecProjFeed />
+                    </Suspense>
                 </section>
 
                 <section className="home-about" ref={refAbout}>

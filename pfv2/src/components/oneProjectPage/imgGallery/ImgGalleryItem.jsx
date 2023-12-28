@@ -1,6 +1,6 @@
 import "./ImgGalleryItem.scss"
 
-function ImgGalleryItem({ imgGalleryItemMob, imgGalleryItemDesk, imgGalleryItemAltText }) {
+function ImgGalleryItem({ imgGalleryItemMob, imgGalleryItemDesk, imgGalleryItemAltText, imgGalleryText }) {
 
     return (
         <>
@@ -10,6 +10,7 @@ function ImgGalleryItem({ imgGalleryItemMob, imgGalleryItemDesk, imgGalleryItemA
                 <source media="(min-width: 768px)" srcSet={imgGalleryItemDesk} />
                 <img className="img-gallery__item__inner" src={imgGalleryItemMob} alt={imgGalleryItemAltText} />
             </picture>
+            <p className="img-gallery__item__text  p--medium">{imgGalleryText}</p>
             
         </div>
         

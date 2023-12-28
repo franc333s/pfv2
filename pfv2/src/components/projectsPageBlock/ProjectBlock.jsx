@@ -1,8 +1,9 @@
+import React from "react";
 import { Link } from "react-router-dom";
-import ButtonPrimary from "../buttons/ButtonPrimary";
 
 import './ProjectBlock.scss'
 
+const ButtonPrimary = React.lazy(() => import ("../buttons/ButtonPrimary"));
 
 function ProjectBlock({ slug, projectName, role, year, projectSummary, tag }) {
 

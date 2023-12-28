@@ -1,12 +1,36 @@
-import Footer from "../components/footer/Footer";
-import ProjectBlock from "../components/projectsPageBlock/ProjectBlock";
+import React, { useState, useEffect, Suspense } from "react";
+import { collection, getDocs } from "firebase/firestore";
+import db from "../firebase/config";
+
 import Topbar from "../components/topbar/Topbar";
+import Footer from "../components/footer/Footer";
+
+const LazyProjectBlock = React.lazy(() => import("../components/projectsPageBlock/ProjectBlock"));
 
 
-import projectsData from "../json/projectsData.json";
+function ProjectsPage() {
 
+    const [ projectsData, setProjectsData ] = useState([]);
 
-function DevProjectsPage() {
+    useEffect(() => {
+        const obtainProjectsData = async () => {
+            try {
+                const projectsRef = collection(db, "projects");
+                const querySnapshot = await getDocs(projectsRef);
+
+                const projects = [];
+                querySnapshot.forEach((doc) => {
+                    projects.push({ id: doc.id, ...doc.data() });
+                });
+
+                setProjectsData(projects);
+            } catch (error) {
+                console.error("Error getting projects:", error);
+            }
+        };
+
+        obtainProjectsData();
+    }, []);
 
     return (
         <>
@@ -17,8 +41,11 @@ function DevProjectsPage() {
             <main className="bg-color-blue topbar-offset-padding vertical-padding">
                 <div className="projects">
                     <h1 className="h3 text-color-white">Latest dev/design projects</h1>
-                    {projectsData.map((project) => 
-                        <ProjectBlock 
+                    
+                    <Suspense fallback={<div>Latest dev/design projects...</div>}>
+                    
+                    {projectsData.map((project) => (
+                        <LazyProjectBlock 
                             key={project.id}
                             projectName={project.projectName}
                             slug={project.slug}
@@ -27,7 +54,10 @@ function DevProjectsPage() {
                             projectSummary={project.projectSummary}
                             tag={project.tag}
                         />
-                    )}
+
+
+                    ))}
+                    </Suspense>
                 </div>
             </main>
 
@@ -37,4 +67,4 @@ function DevProjectsPage() {
     )
 }
 
-export default DevProjectsPage;
+export default ProjectsPage;
