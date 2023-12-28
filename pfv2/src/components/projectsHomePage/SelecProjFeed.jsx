@@ -1,17 +1,45 @@
-import ButtonPrimary from "../buttons/ButtonPrimary";
+import React, { useState, useEffect } from "react";
+
+import { collection, getDocs } from "firebase/firestore";
+import db from "../../firebase/config";
+
 import "./SelecProjFeed.scss"
 
-import SelectedProject from "./selectedProject/SelectedProject";
-import selectedProjectsData from "../../json/selectedProjectsData.json";
-
+const ButtonPrimary = React.lazy(() => import ("../buttons/ButtonPrimary"));
+const SelectedProject = React.lazy(() => import ("./selectedProject/SelectedProject"));
 
 
 function SelecProjFeed () {
-    
+
+    const [ selectedProjects, setSelectedProjects ] = useState([]);
+
+    useEffect(() => {
+        const obtainSelectedProjects = async () => {
+            try {
+                const projectsRef = collection(db, "selectedProjects");
+                const querySnapshot = await getDocs(projectsRef);
+
+                const projectsData = [];
+                querySnapshot.forEach((doc) => {
+                    projectsData.push({ id: doc.id, ...doc.data() });
+                });
+
+                setSelectedProjects(projectsData);
+
+            } catch (error) {
+                console.error("Error getting selected projects:", error);
+            }
+        };
+
+        obtainSelectedProjects();
+
+    }, []);
+
+
     return (
         <>
             <p className="h3 selected-proj-feed__title">Selected projects</p>
-            {selectedProjectsData.map((project) =>
+            {selectedProjects.map((project) =>
                 <SelectedProject 
                     key={project.id}
                     projectName={project.projectName}

@@ -4,30 +4,27 @@
 .project-desc {
 
     @include mq($bp-medium) {
-        display: flex;
-        flex-direction: row-reverse;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
         gap: 4rem;
     }
 
-    &__text ~ &__text {
-        padding-top: 1.6rem;
-    }
+    // &__text ~ &__text {
+    //     padding-top: 1.6rem;
+    // }
 
     &__specs {
-        display: flex;
-        gap: clamp(2rem, 2.61vw + 0.98rem, 6rem);
-        padding-top: 4rem;
-
         display: grid;
-        grid-template-columns: 1fr 2fr .6fr;
-        gap: 2.8rem;
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 1.6rem;
+        padding-bottom: 4rem;
+
 
         @include mq($bp-medium) {
             display: flex;
             flex-direction: column;
             gap: 2.4rem;
             padding-top: 0;
-            //width: 40%;
         }
     }
 

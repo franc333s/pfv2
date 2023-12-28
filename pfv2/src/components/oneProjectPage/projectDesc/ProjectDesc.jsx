@@ -1,6 +1,5 @@
 
 import { Link } from "react-router-dom"
-import ArrowRight from "../../arrows/ArrowRight";
 import "./ProjectDesc.scss"
 
 const renderParagraphs = (text) => {
@@ -18,10 +17,6 @@ const renderParagraphs = (text) => {
     return (
         <> 
             <section className="project-desc">
-
-                <p className="p--medium">
-                {renderParagraphs(projectDescription)}
-                </p>
 
                 <aside className="project-desc__specs">
 
@@ -41,6 +36,10 @@ const renderParagraphs = (text) => {
                     </div>
 
                 </aside>
+
+                <p className="p--medium">
+                {renderParagraphs(projectDescription)}
+                </p>
                 
             </section>
             <div className="project-desc-github">

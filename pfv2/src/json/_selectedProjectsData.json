@@ -7,7 +7,7 @@
         "selectedProjectImg": "/images/projects/cuatrocuatros/cuatro-cuatros-selec-proj.webp",
         "selectedProjectImgAltText": "Cuatro Cuatros Website",
         "selectedProjectDesc": "Cuatro Cuatros is a Product Design Studio from Valencia (SP). This website was designed by Cuatro Cuatros and developed by me in Wordpress.",
-        "slug": "dev/cuatro-cuatros"
+        "slug": "cuatro-cuatros"
     },
     {
         "id": 2,
@@ -17,7 +17,7 @@
         "selectedProjectImg": "/images/projects/crude/crude-selec-proj.webp",
         "selectedProjectImgAltText": "Crude Ecommerce",
         "selectedProjectDesc": "Crude is an e-commerce project for an all-gender jewelry brand. This project involved the user experience and user interface (UX/UI) design followed by the development of an online sales platform with WooCommerce and WordPress.",
-        "slug": "dev/crude"
+        "slug": "crude"
     },
     {
         "id": 3,
@@ -27,7 +27,7 @@
         "selectedProjectImg": "/images/projects/quoteapp/quote-app-selec-proj.webp",
         "selectedProjectImgAltText": "QuoteApp React Project",
         "selectedProjectDesc": "Project developed with React that provides quotes from famous people with data obtained from an API.",
-        "slug": "dev/quoteapp"
+        "slug": "quoteapp"
     },
     {
         "id": 4,
@@ -37,6 +37,6 @@
         "selectedProjectImg": "/images/projects/pokedex/pokedex-selec-proj.webp",
         "selectedProjectImgAltText": "Pokedex App",
         "selectedProjectDesc": "Development of a Pokédex with data obtained from the public API PokéAPI. [This is a work in progress]",
-        "slug": "dev/pokedex"
+        "slug": "pokedex"
     }
 ]
