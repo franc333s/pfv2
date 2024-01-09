@@ -1,16 +1,17 @@
 import React, { useState, useEffect, Suspense } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import db from "../firebase/config";
-
 import Topbar from "../components/topbar/Topbar";
 import Footer from "../components/footer/Footer";
+import BarLoader from "react-spinners/BarLoader";
 
 const LazyProjectBlock = React.lazy(() => import("../components/projectsPageBlock/ProjectBlock"));
-
 
 function ProjectsPage() {
 
     const [ projectsData, setProjectsData ] = useState([]);
+    const [isFetching, setIsFetching] = useState(true);
+    const sortedProjects = projectsData.slice().sort((a, b) => a.id - b.id);
 
     useEffect(() => {
         const obtainProjectsData = async () => {
@@ -24,13 +25,20 @@ function ProjectsPage() {
                 });
 
                 setProjectsData(projects);
+                setIsFetching(false);
             } catch (error) {
                 console.error("Error getting projects:", error);
+                setIsFetching(false); 
             }
         };
 
         obtainProjectsData();
     }, []);
+
+    const barLoaderCustomStyles = {
+        borderRadius: '5px'
+    };
+
 
     return (
         <>
@@ -40,11 +48,33 @@ function ProjectsPage() {
 
             <main className="bg-color-blue topbar-offset-padding vertical-padding">
                 <div className="projects">
-                    <h1 className="h3 text-color-white">Latest dev/design projects</h1>
+                    <h1 className="h3 text-color-yellow">Latest dev/design projects</h1>
                     
-                    <Suspense fallback={<div>Latest dev/design projects...</div>}>
+                    <Suspense fallback={<div className="projects__spinner">
+                        <BarLoader
+                            color="#ffffff"
+                            cssOverride={barLoaderCustomStyles}
+                            height={4}
+                            loading
+                            speedMultiplier={0.4}
+                            width={100}
+                        />
+                    </div>}>
+
+                    {isFetching || sortedProjects.length === 0 ? (
+                        <div className="projects__spinner">
+                            <BarLoader
+                                color="#ffffff"
+                                cssOverride={barLoaderCustomStyles}
+                                height={4}
+                                loading
+                                speedMultiplier={0.4}
+                                width={100}
+                            />
+                        </div>
+                    ) : (
                     
-                    {projectsData.map((project) => (
+                    sortedProjects.map((project) => (
                         <LazyProjectBlock 
                             key={project.id}
                             projectName={project.projectName}
@@ -54,10 +84,11 @@ function ProjectsPage() {
                             projectSummary={project.projectSummary}
                             tag={project.tag}
                         />
+                        ))
+                    )}
 
-
-                    ))}
                     </Suspense>
+
                 </div>
             </main>
 

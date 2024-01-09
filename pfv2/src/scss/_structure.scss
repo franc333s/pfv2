@@ -1,0 +1,123 @@
+@import "./sass-variables";
+@import "./mixins";
+
+.home {
+
+    &-hero {
+
+        &__links {
+            display: flex;
+            gap: 3.2rem;
+        }
+    }
+
+    &-selec-proj {
+
+        &__spinner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &-contact {
+
+        @include mq($bp-uppermedium) {
+            display: grid;
+            grid-template-columns: 1.5fr 2fr;
+        }
+    }
+    
+    &-copyright {
+        display: flex;
+        justify-content: flex-end;
+        align-items: self-end;
+    }
+
+}
+
+
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    padding-top: clamp(6.6rem, 3.53vw + 5.22rem, 12rem);
+
+    &__spinner {
+        min-height: 72vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.info {
+
+    &__contact {
+
+        @include mq($bp-uppermedium) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8rem;
+        }
+    }
+
+    &__bio {
+        padding-top: clamp(8rem, 5.23vw + 5.96rem, 16rem);
+        
+        &__content {
+            padding-top: clamp(2.4rem, 1.05vw + 1.99rem, 4rem);
+
+            @include mq($bp-uppermedium) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 8rem;
+            }
+
+            &__text + &__text {
+                padding-top: 4rem;
+
+            }
+
+            &__btns {
+                padding-top: 8rem;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            &__imgblock {
+                padding: 7rem 0 16rem;
+    
+                @include mq($bp-uppermedium) {
+                    padding: 0 0 6rem;
+                }
+            }
+        }
+    }
+}
+
+.portfolio {
+    min-height: calc(100vh - 4.2rem);
+    padding-top: 10rem;
+
+    &--flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        @include mq($bp-medium) {
+            flex-direction: row;
+        }
+    } 
+
+    &__title {
+        padding-top: 10rem;
+    }
+
+    &__content {
+        padding-top: 6rem;
+    }
+}

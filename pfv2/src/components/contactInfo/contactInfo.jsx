@@ -47,7 +47,7 @@ function ContactInfo ({ className }) {
                     <div className="contact-block__item">
                         <h4 className="vertical-trim-line-height">
                             <Link className="hover-effect" target="_blank" to="https://github.com/franc333s">
-                                <div className="overflow-hidden position-relative hover-effect__inner" data-text="Linkedin">
+                                <div className="overflow-hidden position-relative hover-effect__inner" data-text="Github">
                                     <div className="hover-effect__text">
                                         Github
                                     </div>
@@ -60,7 +60,7 @@ function ContactInfo ({ className }) {
                     <div className="contact-block__item">
                         <h4 className="vertical-trim-line-height">
                             <Link className="hover-effect" target="_blank" to="https://www.behance.net/apellidofrances">
-                                <div className="overflow-hidden position-relative hover-effect__inner" data-text="Linkedin">
+                                <div className="overflow-hidden position-relative hover-effect__inner" data-text="Behance">
                                     <div className="hover-effect__text">
                                         Behance
                                     </div>

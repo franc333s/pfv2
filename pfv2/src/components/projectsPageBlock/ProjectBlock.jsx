@@ -25,7 +25,7 @@ function ProjectBlock({ slug, projectName, role, year, projectSummary, tag }) {
                     {tag && (
                         <p className="project-block__info__tag">{tag}</p>
                     )}
-                    <ButtonPrimary className="project-block__info__btn" to={projectSlug} text="View project"/>
+                    <ButtonPrimary className="project-block__info__btn" to={slug} text="View project"/>
                 </div>
                 
             </div>

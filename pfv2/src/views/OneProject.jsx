@@ -6,6 +6,8 @@ import db from "../firebase/config";
 import Topbar from "../components/topbar/Topbar";
 import ButtonPrimary from "../components/buttons/ButtonPrimary";
 import Footer from "../components/footer/Footer";
+import BarLoader from "react-spinners/BarLoader";
+
 
 const LazyProjectHero = React.lazy(() => import ("../components/oneProjectPage/projectHero/ProjectHero"));
 const LazyProjectDesc = React.lazy(() => import ("../components/oneProjectPage/projectDesc/ProjectDesc"));
@@ -35,6 +37,10 @@ function OneProject() {
         obtainProject();
     }, [slug]);
 
+    const barLoaderCustomStyles = {
+        borderRadius: '5px'
+    };
+
 
 
     return (
@@ -48,7 +54,16 @@ function OneProject() {
                 {project && (
 
                 <>
-                <Suspense fallback={<div>Project loading</div>}> 
+                <Suspense fallback={<div className="projects__spinner">
+                        <BarLoader
+                            color="#262626"
+                            cssOverride={barLoaderCustomStyles}
+                            height={4}
+                            loading
+                            speedMultiplier={0.4}
+                            width={100}
+                        /></div>}>
+
                     <LazyProjectHero 
                         projectName={project.projectName}
                         projectURL={project.projectURL}
@@ -73,7 +88,7 @@ function OneProject() {
                 </Suspense>
 
                 <div className="display-flex justify-content-end  padding-top--4">
-                    <ButtonPrimary className="text-color-green svg-color-green" to="/projects" text="Return to all projects" />
+                    <ButtonPrimary className="text-color-green svg-color-green" to="/projects" text="Return to projects" />
                 </div>
                 
                 </>

@@ -31,6 +31,7 @@ svg {
 
         & svg {
             fill: $color-bg-white;
+            padding-top: .1rem;
             height: clamp(1.6rem, 0.26vw + 1.5rem, 2rem);
         }
 

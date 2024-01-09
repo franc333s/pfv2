@@ -27,7 +27,7 @@ function Footer({ className }) {
                             
                         </Link>
                     </li>
-                    <li className="footer__item">&#169;2023</li>
+                    <li className="footer__item">&#169;2024</li>
                 </ul>
             </footer>
         </>

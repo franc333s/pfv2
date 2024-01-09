@@ -1,10 +1,9 @@
-import React, { useState, useEffect, Suspense } from "react";
+import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import ButtonPrimary from "../components/buttons/ButtonPrimary";
 import ContactInfo from "../components/contactInfo/contactInfo";
+import SelecProjFeed from "../components/projectsHomePage/SelecProjFeed";
 import Topbar from "../components/topbar/Topbar";
-
-const LazySelecProjFeed = React.lazy(() => import("../components/projectsHomePage/SelecProjFeed"));
 
 
 function Home() {
@@ -15,7 +14,7 @@ function Home() {
     const [refProjFeed, inViewProjFeed] = useInView({ threshold: 0.2, })
     const [refAbout, inViewAbout] = useInView({ threshold: 0.2, })
     const [refContact, inViewContact] = useInView({ threshold: 0.2, })
-    //check threshold, it does not work properly
+    //check threshold
 
     const updateScrollStage = () => {
         if (inViewHero) {
@@ -33,6 +32,7 @@ function Home() {
         updateScrollStage();
     }, [inViewHero, inViewProjFeed, inViewAbout, inViewContact]);
 
+
     return (
         <>
             <header>
@@ -47,15 +47,13 @@ function Home() {
                     <div className="home-hero__links">
                         <ButtonPrimary className="home-hero__links__item" to="/projects" text="Work"/>
                         <ButtonPrimary className="home-hero__links__item" to="/info" text="About"/>
-                        <ButtonPrimary className="home-hero__links__item" to="/projects" text="Contact"/>
+                        <ButtonPrimary className="home-hero__links__item" to="mailto:marinafase@gmail.com" text="Contact"/>
                     </div>
                 </section>
 
                 
                 <section className="home-selec-proj" ref={refProjFeed}>
-                    <Suspense fallback={<div>Selected projects loading</div>}>
-                        <LazySelecProjFeed />
-                    </Suspense>
+                    <SelecProjFeed />
                 </section>
 
                 <section className="home-about" ref={refAbout}>
@@ -70,7 +68,7 @@ function Home() {
                         <ContactInfo/>
                     </div>
                     <div className="home-copyright">
-                        <p className="p--small-fixed">&#169;Marina Francés 2023</p>
+                        <p className="p--small-fixed">&#169;Marina Francés 2024</p>
                     </div>
                     
                 </section>

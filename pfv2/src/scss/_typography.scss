@@ -22,9 +22,10 @@ h2,
 
 h3,
 .h3 {
-    font-size: clamp(1.6rem, 0.52vw + 1.4rem, 2.4rem);
+    font-size: clamp(1.6rem, 0.26vw + 1.49rem, 2rem);
     font-weight: $font-weight-light;
     text-transform: uppercase;
+    margin-inline-start: 0;
 }
 
 
@@ -57,8 +58,9 @@ h5,
 
 
 .p--medium {
-    font-size: clamp(2rem, 0.65vw + 1.75rem, 3rem);
+    font-size: 2rem;
     font-weight: $font-weight-xlight;
+    line-height: 1.4;
 }
 
 .p--xlarge {
