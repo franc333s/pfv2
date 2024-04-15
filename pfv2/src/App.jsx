@@ -1,13 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-
-import "./scss/global.scss";
-
 import Home from "./views/Home";
 import ProjectsPage from "./views/ProjectsPage";
 import OneProject from "./views/OneProject";
+import Lab from "./views/Lab";
 import Info from "./views/Info";
-
-
+import "./scss/global.scss";
 
 
 export function App() {
@@ -18,6 +15,7 @@ export function App() {
                 <Route path='/' element={<Home />} />
                 <Route path='/projects' element={<ProjectsPage />} />
                 <Route path='/projects/:slug' element={<OneProject />} />
+                <Route path='/lab' element={<Lab />} />
                 <Route path='/info' element={<Info />} />
             </Routes>
         </>

@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Button.scss"
-
 import ArrowRight from "../arrows/ArrowRight";
-
 
 const ButtonPrimary = ({ to, text, openInNewTab, className }) => {
 

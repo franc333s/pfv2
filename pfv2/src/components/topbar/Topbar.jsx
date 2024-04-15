@@ -56,6 +56,16 @@ function Topbar({ scrollStage, className }) {
                 </li>
 
                 <li className="topbar__nav__item">
+                    <Link onClick={ closeMenu }  to="/lab" className="topbar-inner-margin-top hover-effect">
+                        <div className="overflow-hidden position-relative hover-effect__inner" data-text="Lab">
+                            <div className="hover-effect__text">
+                                Lab
+                            </div>
+                        </div>
+                    </Link>
+                </li>
+
+                <li className="topbar__nav__item">
                     <Link onClick={ closeMenu } to="/info" className="hover-effect">
                         <div className="overflow-hidden position-relative hover-effect__inner" data-text="Info">
                             <div className="hover-effect__text">

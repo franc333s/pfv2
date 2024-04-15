@@ -1,4 +1,4 @@
-@import "../../scss/sass-variables";
+@import "../../scss/variables";
 @import "../../scss/mixins";
 
 
@@ -9,7 +9,7 @@ svg {
 .btn {
 
     &--primary {
-        font-size: clamp(2rem, 0.26vw + 1.9rem, 2.4rem);
+        font-size: $font-size-btn;
         text-transform: uppercase;
         transition: all .2s ease-in-out;
 
